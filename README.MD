@@ -8,4 +8,4 @@ To install all requirements for the project use:
 
     pip install -r requirements.txt
     
-For your convenience each directory has its own README withe detailed explanations.
+For your convenience each directory has its own README with detailed explanations.
