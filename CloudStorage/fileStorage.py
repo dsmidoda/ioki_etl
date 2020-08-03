@@ -28,7 +28,7 @@ def remove_nan(file):
         import pandas as pd
         df = pd.read_csv(file, sep=";")
         df = df.dropna()
-        df.to_csv("clean_{}".format(file))
+        return df.to_csv("clean_{}".format(file))
 
     except Exception as e:
         print(e)
@@ -68,4 +68,3 @@ def main():
 if __name__ == '__main__':
     main()
     logging.info("Operation completed")
-
