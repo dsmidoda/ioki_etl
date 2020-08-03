@@ -5,7 +5,6 @@ from airflow.utils.dates import days_ago
 from google.cloud import bigquery
 from google.cloud import storage
 
-
 gcp_project = "pyetl01"
 bucketname = "ioki_datasets"
 bq_dataset_id = "RawDataset"
@@ -117,12 +116,10 @@ create_result_dataset = PythonOperator(
     python_callable=results_datasets,
     dag=dag)
 
-
 import_from_storage = PythonOperator(
     task_id='import_data_to_BQ',
     python_callable=run,
     dag=dag)
-
 
 test_utilization = BigQueryOperator(
     task_id="create_test_utilization_tbl",
@@ -135,7 +132,6 @@ average_score = BigQueryOperator(
     sql="/templates/sql/task4.sql",
     use_legacy_sql=False,
     dag=dag)
-
 
 save_results = PythonOperator(
     task_id='save_results_to_storage',
