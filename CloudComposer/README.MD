@@ -12,3 +12,5 @@ While having that upload the pipeline and its dependencies to the dags folder of
 
 Note that before deploying a pipeline it is expected to have files already within the bucket. You can upload files using
 fileStorage.py script from CloudStorage directory.
+
+Templates contains SQL queries to act on the dataset.
