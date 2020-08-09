@@ -1,6 +1,6 @@
 # Python ETL
 Code within the project creates the resources, load the data, make transformations through Apache airflow pipeline and 
-load the transformed data back into storage.
+load the transformed data back into storage. The Apache Airflow code has been placed in Cloud Composer folder. 
 
 To run the code it is expected to have the GCP account with access to the cloud services.
 
